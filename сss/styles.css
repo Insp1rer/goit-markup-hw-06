@@ -940,15 +940,49 @@ body {
   text-decoration: underline;
 }
 
-.modal-checkbox {
-  -webkit-appearance: none;
+.check-input {
+  /* -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  appearance: none;  */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .modal-check {
   margin-top: 8px;
   margin-bottom: 16px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+}
+
+.check-box {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  margin-right: 8px;
+  background-color: var(--white-color);
+  border: 1px solid var(--common-color);
+  border-radius: 2px;
+  transition: background-color 250ms var(--cubic), border 250ms var(--cubic);
+}
+
+.check-input:checked + .check-box {
+  background-color: var(--accent-color);
+  background-origin: border-box;
+  border-color: var(--accent-color);
+  background-image: url(../images/check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .modal-send-button-field {

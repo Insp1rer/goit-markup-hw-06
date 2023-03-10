@@ -492,9 +492,10 @@
             <form class="footer-email">
               <input
                 type="email"
-                name="email"
+                name="E-mail"
                 placeholder="E-mail"
                 class="email-form"
+                required
               />
               <button type="submit" class="footer-form-button">
                 <span class="footer-form-button-text">Subscribe</span>
@@ -577,18 +578,15 @@
               </div>
             </div>
             <div role="group" class="modal-check">
-              <input
-                type="checkbox"
-                id="checkbox"
-                class="modal-checkbox hidden"
-                value="check"
-              />
-              <label for="checkbox" class="label-checkbox">
-                <span class="checkbox-icon">
-                  <svg width="10" height="8">
-                    <use href="./images/icons.svg#icon-check"></use>
-                  </svg>
-                </span>
+              <label class="check">
+                <input
+                  type="checkbox"
+                  class="check-input"
+                  name="check-select"
+                  value="check"
+                  required
+                />
+                <span class="check-box"> </span>
                 <span class="text-check"
                   >I accept the terms and conditions of the
                   <a href="" class="policy-href">Privacy Policy</a>
