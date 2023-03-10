@@ -864,8 +864,25 @@ body {
   padding-left: 38px;
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
-
   border-radius: 4px;
+
+  transition: border 250ms var(--cubic);
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: fill 250ms var(--cubic);
+}
+
+.input-field-text:focus {
+  border-color: var(--logo-n-button-color);
+}
+
+.input-field-text:focus + .input-icon {
+  fill: var(--logo-n-button-color);
 }
 
 .input-field-comment {
@@ -877,6 +894,12 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
+
+  transition: border 250ms var(--cubic);
+}
+
+.input-field-comment:focus {
+  border: 1px solid var(--logo-n-button-color);
 }
 
 .input-field-comment::placeholder {
@@ -903,13 +926,6 @@ body {
   color: var(--border-color);
 }
 
-.input-icon {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-}
-
 .text-check {
   font-weight: 400;
   font-size: 12px;
@@ -932,5 +948,38 @@ body {
 
 .modal-check {
   margin-top: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+}
+
+.modal-send-button-field {
+  margin: 0;
+  padding: 0;
+  margin-left: 95.5px;
+  margin-right: 95.5px;
+}
+
+.modal-send-button {
+  display: block;
+  text-align: center;
+  min-width: 169px;
+  min-height: 56px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white-color);
+  cursor: pointer;
+
+  background-color: var(--logo-n-button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+
+  transition: background-color 250ms var(--cubic);
+}
+
+.modal-send-button:hover,
+.modal-send-button:focus {
+  background-color: var(--accent-color);
 }
